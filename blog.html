@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Difference between Local storage and session storage.
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Local Storage:</strong> DOMStrings are storage formats that use UTF-16 to encode data, which uses two bytes per character. Strings are automatically generated from integer keys just as they are for objects. The data stored in LocalStorage is specific to a protocol in the document. If the site is loaded over HTTP (e.g., http://example.com), localStorage returns a different object than if it is loaded over HTTPS (e.g., https://abc.com).Local storage has 4 methods:setItem() Method – This method takes two parameters one is key and another one is value. It is used to store the value in a particular location with the name of the key.getItem() Method.removeItem() Method.clear() Method.
+              <strong>Session Storage:</strong> Session Storage objects can be accessed using the sessionStorage read-only property. The difference between sessionStorage and localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page session ends.Session Storage has 4 methods:setItem() Method – This method takes two parameters one is key and another one is value. It is used to store the value in a particular location with the name of the key.getIteam() Method – This method takes one parameter that is key which is used to get the value stored with a particular key name.removeItem() Method – This is method is used to remove the value stored in the memory in reference to key.clear() Method – This method is used to clear all the values stored in the session storage
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Difference between Global scope and Block scope.
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Global scope: </strong> Global scope contains all of the things defined outside of all code blocks. A code block simply consists of grouped statements inside curly braces ({ }). if statement, loops, function are examples of structure that create a code block. A global variable has global scope. A global variable is accessible from anywhere in the code.
+              <strong>Block scope: </strong> A variable when declared inside the if or switch conditions or inside for or while loops, are accessible within that particular condition or loop. To be consise the variables declared inside the curly braces are called as within block scope.let & const are also called as block scope that is they are accessible within that particular block. Here let is used for variable which can be changed as we proceed through the program whereas const is used for a variable which doesn’t change till the program ends, that is it remains constant throughout the program.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              How JavaScript event loop works?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>JavaScript event loop</strong> The common denominator in all environments is a built-in mechanism called the event loop, which handles the execution of multiple chunks of your program over time, each time invoking the JS Engine. The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it.
+
+              Such an iteration is called a tick in the Event Loop. Each event is just a function callback.JavaScript code that does not use any asynchronous Web APIs will execute in a synchronous manner—one at a time, sequentially. This is demonstrated by this example code that calls three functions that each print a number to the console.JavaScript has 6 primitive types:
+              undefined means a variable has been declared but has not yet been assigned a value. undefined is a type by itself (undefined). Unassigned variables are initialized by JavaScript with a default value of undefined.
+              1) Data types
+              2) In arithmetic operations
+              3) Undefined and null are falsy
+              Boolean: true or false
+              Number: 1, 6.7, 0xFF
+              String: "Gorilla and banana"
+              Symbol: Symbol("name") (starting ES2015)
+              Null: null
+              Undefined: undefined.
+              Uninitialized variable:A declared variable but not yet assigned with a value (uninitialized) is by default undefined.
+              Increase cohesion
+              Accessing a non-existing property
+            When accessing a non-existing object property, JavaScript returns undefined.
+            Destructuring to access object properties.
+            Fill the object with default properties.
+            Function parameters
+The function parameters implicitly default to undefined.
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</body>
+</html>
